@@ -14,7 +14,7 @@ class ScoreDialog extends Component {
     return (
       <div>
         <Modal isOpen={this.props.modal} className={this.props.className}>
-          <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+          <ModalHeader toggle={this.toggle}>Your Score</ModalHeader>
           <ModalBody>
             <h4>Your Time: {this.props.elapsed.toFixed(2)}</h4>
             <h4>Your Accuracy: {this.props.accuracy.toFixed(2)}</h4>
