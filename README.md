@@ -10,5 +10,4 @@ I wanted some practice with React JSX + ES6, Bootstrap 4, Webpack + Babel
 Just run npm install and then npm start
 
 ## License
-
-A short snippet describing the license (MIT, Apache, etc.)
+MIT
