@@ -8,4 +8,4 @@ I wanted some practice with React JSX + ES6, Bootstrap 4, Webpack + Babel
 
 ## Installation
 
-Just run npm install and then npm start
+Just run npm install and then npm start. Hit "localhost:3000/" in the browser and it should be running.

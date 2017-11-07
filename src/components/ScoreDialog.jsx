@@ -8,20 +8,19 @@ class ScoreDialog extends Component {
 
 
   }
-
-
+  
   render() {
     return (
       <div>
         <Modal isOpen={this.props.modal} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Your Score</ModalHeader>
           <ModalBody>
-            <h4>Your Time: {this.props.elapsed.toFixed(2)}</h4>
-            <h4>Your Accuracy: {this.props.accuracy.toFixed(2)}</h4>
-            <h4>Your Score: {(this.props.elapsed * this.props.accuracy).toFixed(2)}</h4>
+            <h4>Your Time: {(this.props.elapsed/1000).toFixed(2)} seconds</h4>
+            <h4>Your Accuracy: {this.props.accuracy.toFixed(2) * 100}%</h4>
+            <h4>Your Score: {Math.ceil(((this.props.accuracy * 1000)/(this.props.elapsed/1000)))}</h4>
           </ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={this.props.saveTime}>Do Something</Button>{' '}
+            <Button color="primary" className="disabled" onClick={this.props.save}>Save Score</Button>
             <Button color="secondary" onClick={this.props.close}>Cancel</Button>
           </ModalFooter>
         </Modal>
